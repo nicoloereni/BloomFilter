@@ -7,7 +7,6 @@ public class BloomFilter {
         this.wordsArray = new WordsArray(dataFactory.all());
     }
 
-
     public boolean isWorldInSet(String word) {
         return wordsArray.contains(word);
     }

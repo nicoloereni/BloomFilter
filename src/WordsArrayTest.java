@@ -1,21 +1,32 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class WordsArrayTest {
 
-    @Test
-    public void arraycontainsWordTest(){
+    private WordsArray wordsArray;
+
+    @Before
+    public void setUp(){
         ArrayList<String> list = new ArrayList<String>();
         list.add("pollo");
-        WordsArray wordsArray = new WordsArray(list);
+        wordsArray = new WordsArray(list);
+    }
+
+    @Test
+    public void arraycontainsWordTest(){
+
         assertTrue(wordsArray.contains("pollo"));
         assertFalse(wordsArray.contains("asbragisti"));
     }
 
-
-
+    @Test
+    public void getHashFromLitteralString(){
+        assertEquals(10684840, wordsArray.getHash("pollo"));
+    }
 }
