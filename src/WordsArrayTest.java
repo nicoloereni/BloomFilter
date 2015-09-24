@@ -27,6 +27,6 @@ public class WordsArrayTest {
 
     @Test
     public void getHashFromLitteralString(){
-        assertEquals(10684840, wordsArray.getHash("pollo"));
+        assertEquals(106848, wordsArray.getHash("pollo"));
     }
 }

@@ -8,10 +8,8 @@ public class BloomFilterTest {
     @Test
     public void isWordInSetTest(){
         BloomFilter bloomFilter = new BloomFilter(new DataFactory("wordlist.dat"));
-
         assertTrue(bloomFilter.isWorldInSet("dog"));
         assertFalse(bloomFilter.isWorldInSet("asbragisti"));
-
     }
 
 }
