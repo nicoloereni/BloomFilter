@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class WordsArray {
 
-    private final int [] hash;
+    private final double [] hash;
 
     public WordsArray(ArrayList<String> worldList) {
 
-        hash = new int[99999999];
+        hash = new double[99999999];
         configureWordsArray(worldList);
     }
 
@@ -21,6 +21,10 @@ public class WordsArray {
     }
 
     public int getHash(String word) {
-        return word.hashCode()/1000;
+        int hash = 1;
+        for (int index = 0; index < word.length(); index++) {
+            hash = hash + word.charAt(index)*((index/2)+1);
+        }
+        return hash;
     }
 }
