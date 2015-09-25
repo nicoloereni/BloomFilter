@@ -1,3 +1,5 @@
+package bloomfilter;
+
 import java.util.ArrayList;
 
 public class WordsArray {

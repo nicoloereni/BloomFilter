@@ -1,6 +1,11 @@
+package test;
+
+import junit.framework.TestCase;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertFalse;
+import bloomfilter.BloomFilter;
+import bloomfilter.DataFactory;
+
 import static org.junit.Assert.assertTrue;
 
 public class BloomFilterTest {
@@ -9,7 +14,7 @@ public class BloomFilterTest {
     public void isWordInSetTest(){
         BloomFilter bloomFilter = new BloomFilter(new DataFactory("wordlist.dat"));
         assertTrue(bloomFilter.isWorldInSet("dog"));
-        assertFalse(bloomFilter.isWorldInSet("sgamatolobabedifficilechesiafalsopositivo"));
+        TestCase.assertFalse(bloomFilter.isWorldInSet("sgamatolobabedifficilechesiafalsopositivo"));
         //assertTrue(bloomFilter.isWorldInSet("Afrikaners"));
     }
 

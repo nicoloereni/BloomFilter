@@ -1,6 +1,11 @@
+package test;
+
+import junit.framework.TestCase;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import bloomfilter.WordsArray;
 import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertFalse;
@@ -22,11 +27,11 @@ public class WordsArrayTest {
     public void arraycontainsWordTest(){
 
         assertTrue(wordsArray.contains("pollo"));
-        assertFalse(wordsArray.contains("asbragisti"));
+        TestCase.assertFalse(wordsArray.contains("asbragisti"));
     }
 
     @Test
     public void getHashFromLitteralString(){
-        assertEquals(989, wordsArray.getHash("pollo"));
+        Assert.assertEquals(989, wordsArray.getHash("pollo"));
     }
 }
